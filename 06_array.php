@@ -40,3 +40,4 @@ echo'<br>';
 echo $aluno['uf'];
 echo'<br>';
 ?>
+
