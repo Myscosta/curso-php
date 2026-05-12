@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Tela LOGIN</title>
 </head>
 <body>
     <h1>Login</h1>
     <form action="validar_login.php" method="post">
          <label>E-mail: </label>
-         <input type="email" name="email"><br>
+         <input type="email" name="email">
+         <br><br>
          <label>Senha: </label>
-         <input type="password" name="senha"><br>
+         <input type="password" name="senha">
+         <br><br>
          <button type="submit">Acessar</button>
          <button type="reset">Limpar</button>
     </form>
+
+    <?php
+     echo $_GET['mensagem'] ??"";
+    ?>
+
 </body>
 </html>
