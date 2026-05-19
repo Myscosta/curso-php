@@ -7,3 +7,7 @@ $descricao = $_POST['descricao_evento'];
 $arquivo = fopen("eventos_db.txt", "a");
 fwrite($arquivo, "$nome \t $tipo \t $data \t $descricao \n");
 fclose($arquivo);
+
+header ('location: eventos_formulario.php?mensage=sucesso');
+
+?>

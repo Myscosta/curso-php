@@ -26,8 +26,20 @@
         <br><br>
         <button type = "submit">Salvar</button>
         <button type = "reset">Limpar</button>
-
-
     </form>
+
+
+    <hr>
+    <h2>Listagem de eventos</h2>
+    <?php
+    $arquivo = fopen("eventos_db.txt", "r");
+    while(!feof($arquivo)){
+        $linha =fgets($arquivo);
+        echo "$linha <br>";
+    }
+     fclose($arquivo);
+    ?>
+   
+
 </body>
 </html>

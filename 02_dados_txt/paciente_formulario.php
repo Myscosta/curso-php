@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Cadastro de Paciente</h1>
-    <form action="paciente_salvar.php" methop = "post">
+    <form action="paciente_salvar.php" method = "post">
         <label>Nome</label>
         <input type="text" name = "nome_paciente">
         <br><br>
@@ -50,11 +50,24 @@
         </select>
         <br><br>
         <label>Fumante? </label><br>
-        <button type =" radio" name= "fumante"> Sim</button>
-        <button type =" radio" name= "fumante"> Nao</button>
-
-        
+        <input type ="radio" name= "fumante" value= "sim"> 
+        <label>Sim</label>
+        <input type ="radio" name= "fumante" value = "nao">
+        <label>Não</label>
+        <br><br>
+        <button type = "submit">Salvar</button>
+        <button type = "reset"> Limpar</button>
     </form>
     
+    <hr>
+    <h2>Lista de Paciente</h2>
+    <?php
+    $arquivo = fopen("paciente_db.txt" , "r");
+    while(!feof($arquivo)){
+        $linha =fgets($arquivo);
+        echo "$linha <br>";
+    }
+    ?>
+
 </body>
 </html>

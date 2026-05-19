@@ -21,7 +21,21 @@
         <br><br>
         <button type = "submit">Salvar</button>
         <button type = "reset"> Limpar</button>
-
     </form>
+
+    <hr>
+    <h2>Listagem de Albuns</h2>
+      <?php
+    $arquivo = fopen("filmes_db.txt", "r");
+    while(!feof($arquivo)){
+        $linha =fgets($arquivo);
+        echo "$linha <br>";
+    }
+    fclose($arquivo);
+    ?>
+    
+    // usando o while para que ele possa ler por linhas e exibir uma embaixo da outra.
+    // feof usado para ler o final do ponteiro e com isso ser executado ate finalizar.
+    
 </body>
 </html>
